@@ -8,7 +8,7 @@ from pathlib import Path
 from datetime import datetime
 
 base_dir = Path.cwd()
-cred_path = base_dir / 'cred.json'
+cred_path = base_dir / 'secrets'/ 'cred.json'
 
 gc = gspread.service_account(filename=str(cred_path))
 wks = gc.open("web_parsing_report").sheet1
